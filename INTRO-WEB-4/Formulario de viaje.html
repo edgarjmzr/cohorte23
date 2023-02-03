@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>MI formulario de viajes no tuyo</h1>
+
+    <h2>Ingresa tus datos</h2>
+    <form>
+            <input type="radio" name="gender" value="male" checked> Hombre<br>
+            <input type="radio" name="gender" value="female"> Mujer<br>
+            <input type="radio" name="gender" value="other"> Otro
+          </form><!--Un botón de opción, que permite seleccionar un único valor entre varias opciones con el mismo valor de nombre.-->
+          <br>
+        <form action="/action_page.php">
+            Nombre:<br>
+            <input type="text" name="firstname"><br>
+            Apellidos:<br>
+            <input type="text" name="lastname"><br><br>
+            Fecha de nacimiento:
+            <input type="date" name="birthday"><br><br>
+            
+       
+            Correo electrónico: <br>
+            <input type="email" name="email"><br><br>
+            
+          </form><!--Un campo para editar una dirección de correo electrónico. Parece una entrada de texto, pero tiene parámetros de validación y teclado relevante para admitir navegadores y dispositivos con teclados dinámicos.-->
+          <br>
+    
+    <h2>Ciudad de partida</h2>
+    <form>
+    <select name="Partida" id="Partida">
+        <option value="Oaxaca">Oaxaca</option>
+        <option value="Monterrey">Monterrey</option>
+        <option value="Guadalajara">Guadalajara</option>
+        <option value="Cancún">Cancún</option>
+        <option value="CDMX">CDMX</option>
+        <option value="Mazatlán">Mazatlán</option>
+        <option value="Tampico">Tampico</option>
+        <option value="Puerto Vallarta">Puerto Vallarta</option>
+        <option value="Mérida">Mérida</option>
+    </form>
+    </select>
+
+    <h2>Ciudad de destino</h2>
+    <form>
+    <select name="Destino" id="Destino">
+        <option value="Oaxaca">Oaxaca</option>
+        <option value="Monterrey">Monterrey</option>
+        <option value="Guadalajara">Guadalajara</option>
+        <option value="Cancún">Cancún</option>
+        <option value="CDMX">CDMX</option>
+        <option value="Mazatlán">Mazatlán</option>
+        <option value="Tampico">Tampico</option>
+        <option value="Puerto Vallarta">Puerto Vallarta</option>
+        <option value="Mérida">Mérida</option>
+</form><br><br>
+</select>
+
+
+<h2>Elige tu paquete de viaje</h2>
+<form>
+<select name="Tipo de paquete" id="Tipo de paquete">
+    <option value="Zero">Zero</option>
+    <option value="Monterrey">Ligero (maleta 10kg)</option>
+    <option value="Guadalajara">Pesado (maleta 20kg)</option>
+
+
+</form>
+</select><br><br>
+
+<input type="submit" value="Enviar"><br>
+
+
+</body>
+</html>
