@@ -1,6 +1,8 @@
-body{
-    font-family:  'Open sans', Arial, Tahoma;
+body {
+    font-family: 'Open sans', Arial, Tahoma;
+    /*  */
     font-weight: 400;
+    /*  */
     font-size: 14px;
     color: #363636;
     background: #647fd2;
@@ -8,31 +10,34 @@ body{
 
 
 /*HEADER*/
-h1{
+h1 {
     text-transform: uppercase;
+    text-align: center;
 
 }
 
-h1 span{
+h1 span {
     color: bisque;
 }
 
-#photo-header{
+#photo-header {
     text-align: center;
     border-bottom-color: #647fd2;
     border-bottom-width: 5px;
     border-bottom-style: double;
 }
 
-#photo img{
-    background-color: #dedede;
-    width: 480px;
-    height: 480px;
+#photo img {
+    background-color: #ffffff;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
 }
 
-.container{
-    max-width: 900px;
+.container {
+    /* The container shorthand CSS property establishes the element as a query container and specifies the name or name for the containment context used in a container query. */
+    max-width: 1200px;
+    /*  */
     background: #ffffff;
     margin-top: 80px;
     margin-left: auto;
@@ -40,16 +45,22 @@ h1 span{
     margin-bottom: 30px;
 }
 
-.menu ul{
+.menu ul {
     text-align: center;
     margin: auto;
     padding: 0%;
     list-style-type: none;
+    /* The list-style-type CSS property sets the marker (such as a disc, character, or custom counter style) of a list item element. */
 
 }
-.menu ul li{
+
+.menu ul li {
     display: inline-block;
+    /* The display CSS property sets whether an element is treated as a block or inline element and the layout used for its children, such as flow layout, grid or flex.
+
+    Formally, the display property sets an element's inner and outer display types. The outer type sets an element's participation in flow layout; the inner type sets the layout of children. Some values of display are fully defined in their own individual specifications; for example the detail of what happens when display: flex is declared is defined in the CSS Flexible Box Model specification. */
     position: relative;
+    /* The position CSS property sets how an element is positioned in a document. The top, right, bottom, and left properties determine the final location of positioned elements. */
 }
 
 .menu ul li a {
@@ -57,6 +68,218 @@ h1 span{
     color: #6d3be4;
     font-size: 10px;
     text-decoration: none;
+    /* The text-decoration shorthand CSS property sets the appearance of decorative lines on text. It is a shorthand for text-decoration-line, text-decoration-color, text-decoration-style, and the newer text-decoration-thickness property.
+
+    Try it */
     display: block;
-    padding: 3px;
+    padding: 5px;
+}
+
+/* La propiedad position de CSS especifica cómo un elemento es posicionado en el documento. Las propiedades top, right, bottom, y left determinan la ubicación final de los elementos posicionados. */
+
+
+.menu ul li ul {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    list-style-type: none;
+    display: none;
+    height: auto;
+    /* The height CSS property specifies the height of an element. By default, the property defines the height of the content area. If box-sizing is set to border-box, however, it instead determines the height of the border area. */
+}
+
+.menu ul li:hover ul {
+    /* The hover CSS media feature can be used to test whether the user's primary input mechanism can hover over elements. */
+    display: block
+}
+
+.menu ul li ul li {
+    display: block;
+    width: 60px;
+    height: 20px;
+    margin: 0;
+    text-align: left;
+    font-size: 14px;
+}
+
+/* fin de header */
+h2 {
+    color: #e62020;
+    text-transform: uppercase;
+}
+
+h2::before {
+    content: "// ";
+}
+
+.clearfix:before {
+    display: table;
+    line-height: 1;
+    content: "";
+}
+
+
+.pull-left {
+    float: left;
+}
+
+.row {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+/* .col-60{
+    width: 60%;  esto hizo la diferenciaaaa, hizo que se pusiera del lado derecho la otra mitad, y además puso esa doble barra debajo del kuriboh
+} */
+.col-60 {
+    width: 60%;
+}
+
+.col-10 {
+    width: 10%;
+}
+
+.col-20 {
+    width: 20%;
+}
+
+.col-40 {
+    width: 40%;
+}
+
+.col-80 {
+    width: 80;
+}
+
+.col-90 {
+    width: 90%;
+}
+
+/************/
+.education ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.education.year {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.education .description {
+    background: #dedede;
+    border-bottom: 1px solid #dddddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.education .description h3,
+.education .description p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.education .description p::after {
+    content: "";
+    position: absolute;
+    border: 8px solid transparent;
+    border-right: 8px solid #DEEEEE;
+    top: 5px;
+    left: -16px;
+}
+
+.job .where {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.job.year {
+    font-size: 0.8em;
+}
+
+.job .profesion {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 6em;
+    font-size: 0.9em;
+}
+
+.job .description {
+    margin-top: 0;
+    margin-left: 6em;
+    text-align: justify;
+
+}
+
+.skills {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.skills-item {
+    color: #FFFFFF;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 2px 0 2px 5px;
+    margin-top: 5px;
+    background: #F0563D;
+
+}
+
+.skills-item[data-percent="10"] { width: 10% }
+.skills-item[data-percent="20"] { width: 20% }
+.skills-item[data-percent="30"] { width: 30% }
+.skills-item[data-percent="40"] { width: 40% }
+.skills-item[data-percent="50"] { width: 50% }
+.skills-item[data-percent="60"] { width: 60% }
+.skills-item[data-percent="70"] { width: 70% }
+.skills-item[data-percent="80"] { width: 80% }
+.skills-item[data-percent="90"] { width: 90% }
+
+/* .javaEE {
+        color:#DEEEEE;
+        margin: 3px;
+        list-style-type: none;
+        text-align: right;
+        width: 70%;
+        background-color: #808080;
+    } */
+
+/*********fin skills*********/
+.icon-start {
+    background: url(../imgs/star-grey.png)no-repeat;
+    width: 110px;
+    height: 14px;
+    float: right;
+}
+
+.icon-start-red {
+    background: url(../imgs/star-red.png) no-repeat;
+    width: 110px;
+    height: 14px;
+    float: left;
+}
+
+.obj-start {
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    border-bottom: 5px;
+}
+
+.hobby {
+    background: #ac1616;
+    color: #DEEEEE;
+    padding: 8px;
+    font-size: 0.6em;
+}
+
+.footer p {
+    text-align: right;
+    font-size: 0.8em;
+
+    border-top: 1px solid #DDDDDD;
 }
