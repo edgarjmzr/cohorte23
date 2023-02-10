@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de js para la web (INTRO-WEB-7)</title>
+    <script>
+        function saludar(){
+            console.log("Hola Dimensión XYZ desde la dimensión Fusión");
+        }
+
+        function sumar(v1, v2=10){
+            console.log("esto es una suma: ");
+            return (v1 + v2);
+        }
+    </script>
+    <script>
+        
+        function llamaNombre (nombre){
+            alert("Hola, " + nombre);
+        }
+    </script>
+</head>
+<body>
+    <h1>javascript</h1>
+
+    <script>
+        saludar();
+    </script>
+
+    <script>
+        let nombre = prompt("QUIÉN ERES??????");
+        llamaNombre(nombre);
+    </script>
+
+    <script>
+        console.log("El resultado es: " + sumar(3, 20)); //si solo fuera (3), el resultado sería 13, ya que se respetaría el parámetro original que es 10)
+    </script>
+
+
+
+
+
+
+
+    
+</body>
+</html>
