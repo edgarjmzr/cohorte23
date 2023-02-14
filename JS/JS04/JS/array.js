@@ -41,11 +41,31 @@ let lista = [12,5,80,34];
 lista.reverse(); //acomoda en sentido contrario
 console.log(lista);
 
+
 //sort
 let lista = [12,5,80,34]; 
 lista.sort(
     function(valor1, valor2){
-        return valor1 > valor2;
+        return valor1 - valor2;
+    }
+); //acomoda en orden alfabetico
+console.log(lista);
+
+
+//map
+let lista = [12,5,80,34]; 
+let 1Nueva = lista.map(
+    function(valor){
+        return valor * 2
+    }
+);
+console.log(1Nueva);
+
+
+//sort
+lista.sort(
+    function(valor1, valor2){
+        return valor1 - valor2;
     }
 ); //acomoda en orden alfabetico
 console.log(lista);
