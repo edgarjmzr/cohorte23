@@ -1,3 +1,5 @@
+Object.prototype
+
 let persona = {
     nombre : 'Juan',
     apellido : 'Perez',

@@ -1,0 +1,14 @@
+{
+  "name": "js09",
+  "version": "1.0.0",
+  "description": "Mi proyecto en NPM, si como no jaja",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "edgar jimran",
+  "license": "ISC",
+  "dependencies": {
+    "parrotsay": "^0.1.0"
+  }
+}

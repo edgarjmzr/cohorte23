@@ -19,7 +19,7 @@ class OperacionesAritmeticas{
 // Hay que terminar las operaciones aritmeticas
 
 
-
+let obj
 
 
 let obj4 = new OperacionesAritmeticas(8, 6);
