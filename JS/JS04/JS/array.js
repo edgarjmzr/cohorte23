@@ -44,9 +44,10 @@ console.log(lista);
 
 //sort
 let lista = [12,5,80,34]; 
+let nora = ["hola", "bye", "xd"];
 lista.sort(
-    function(valor1, valor2){
-        return valor1 - valor2;
+    function(a, b){
+        return a - b;
     }
 ); //acomoda en orden alfabetico
 console.log(lista);
