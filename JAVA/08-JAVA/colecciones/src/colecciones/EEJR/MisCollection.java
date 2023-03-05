@@ -1,23 +1,89 @@
 package colecciones.EEJR;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
+
 
 public class MisCollection {
 	
 	public static void main(String[] args) {
+		MisCollection c = new MisCollection();
+		//imprimir(c.listaCollections());
+		//imprimir(c.setCollections());
+		mapCollections();
 		
-		wrapperClass();
+		//wrapperClass();
 	}
 	
-	private void listasCollections() {
+	private static void mapCollections() {
+		Map miMap = new HashMap();
+		miMap.put("key1", "value1");
+		miMap.put("key2", "value2");
+		miMap.put("key3", "value3");
+		miMap.put("key4", "value4");
+		//miMap.clear();
+		//miMap.remove("key3);
+		
+		imprimir(miMap.keySet());
+		imprimir(miMap.values());
+		
+
+		
+		
+		return miMap;
+	}
+	
+	
+	Set setCollections() {
+	Set miSet = new HashSet();
+	miSet.add("uno");
+	miSet.add("dos");
+	miSet.add("tres");
+	miSet.add("cuatro");
+	
+	miSet.remove("uno"); //Hay que especificar el string para remover en el arreglo
+	System.out.println("tamano de la lista " + miSet.size());
+	//miSet.clear(); //elimina toda la lista
+	boolean e = miSet.isEmpty(); //revisa documentacion porque si esta vacio retorna automaticamente falso
+	
+	System.out.println("-->"+ e);
+	
+	Object a[] = miSet.toArray();
+	for (int i = 0; i < a.length; i++) {
+		System.out.println("Este es un set en arreglo " + a[i]);
+	}
+	
+	
+				return miSet;
+	}
+	
+	private List listaCollections() {
 		//method
 		List miLista = new ArrayList();
-		miLista.add(1);
-		miLista.add(2);
+		System.out.println(miLista + "Tamano de la lista antes " + miLista.size());
+		System.out.println("esta vacia "+ miLista.isEmpty());
+		miLista.add("1");
+		miLista.add(0,2);
 		miLista.add(3);
+		miLista.add(0,"Pato");
+		
+		miLista.set(0,miLista);
+		miLista.remove(2);
+		
+		System.out.println(miLista + "Tamano de la lista despues " + miLista.size());
+		System.out.println("esta vacia "+ miLista.isEmpty());
 
+		boolean e = miLista.contains(0);
+		System.out.println("-->" +e);
+		
+		return miLista;
 	} 
+	
+	private static void imprimir(Collection collection) {
+		for (Object elementos: collection) {
+			System.out.println("elementos " + elementos);
+			
+		}
+	}
 	
 	 static void wrapperClass() {
 		// byte, short, char, long, float, int, double
