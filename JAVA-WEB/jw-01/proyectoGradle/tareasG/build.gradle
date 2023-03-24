@@ -1,0 +1,11 @@
+task hola{
+    doLast(){
+        println "Hola mundo desde Gradle"
+    }
+}
+
+task soy(dependsOn: hola) {
+    doLast(){
+        println "Yo soy Developer Full Stack"
+    }
+}
