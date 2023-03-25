@@ -1,17 +1,41 @@
 package com.generation.cohorte23.jpa.services;
 import java.util.ArrayList;
+import java.util.Optional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.generation.cohorte23.jpa.models.UsuarioModel;
 import com.generation.cohorte23.jpa.repositories.UsuarioRepositorio;
 @Service
 public class UsuarioServices {
+	
     @Autowired
     UsuarioRepositorio usuariorepositorio;
-    public ArrayList<UsuarioModel> busquedaPorPrioridad(Integer prioridad) {
-        return usuariorepositorio.busquedaPorPrioridad(prioridad);
+    
+    public boolean eliminarUsuario(Long id) {
+    	try {
+    		usuariorepositorio.deleteById(id);
+    		return true;
+    	} catch (Exception e) {
+    		return false;
+    	}
     }
+    
+    
+    
+    
     public ArrayList<UsuarioModel> ListaUsuarios(){
-        return (ArrayList<UsuarioModel>) usuariorepositorio.findAll();
+    	return (ArrayList<UsuarioModel>) usuariorepositorio.findAll();
+    }
+    public ArrayList<UsuarioModel> busquedaPorPrioridad(Integer prioridad) {
+        return usuariorepositorio.findByPrioridad(prioridad);
+    }
+    
+    public UsuarioModel guardarUsuario(UsuarioModel usuario) {
+    	return usuariorepositorio.save(usuario);
+    }
+    public Optional<UsuarioModel> obtenerPorID(Long id) {
+    	return usuariorepositorio.findById(id);
     }
 }
+    
