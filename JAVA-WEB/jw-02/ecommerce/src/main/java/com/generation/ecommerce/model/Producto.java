@@ -26,8 +26,8 @@ public class Producto {
     
     
     //Contructor vacio para el Jackson(serealizar y deserealizar un objeto JAVA a JSON
-    public Producto() {    
-    }
+   public Producto() {    
+   }
 
     //Constructor con todos los fields
     public Producto(Long id, String nombre, String descripcion, String URL_Imagen, double precio) {
